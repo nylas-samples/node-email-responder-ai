@@ -138,5 +138,10 @@ app.get('/nylas/file', isAuthenticated, async (req, res) => {
   route.getFile(req, res);
 });
 
+app.post('/nylas/draft-email-with-ai', isAuthenticated, express.json(), (req, res) =>
+  route.generateEmailDraftAI(req, res)
+);
+
+
 // Start listening on port 9000
 app.listen(port, () => console.log('App listening on port ' + port));
