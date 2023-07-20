@@ -84,4 +84,5 @@ Update `.env` to include `HUGGINGFACE_HUB_API_KEY`.
 
 ## Commits && Branches
 This section is an overview of different commits and branches for reference
-[Initial read and send email with .gitignore](https://github.com/nylas-samples/node-email-responder-ai/commit/1143c8d8cbbb4002a7a8dddeaafe64ca795a07c7)
+
+- [Initial read and send email with .gitignore](https://github.com/nylas-samples/node-email-responder-ai/commit/1143c8d8cbbb4002a7a8dddeaafe64ca795a07c7)
