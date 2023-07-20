@@ -12,6 +12,7 @@ function SendEmails({
   discardComposer,
   style,
 }) {
+  const SERVER_URI = import.meta.env.VITE_SERVER_URI || 'http://localhost:9000';
   const nylas = useNylas();
 
   const [to, setTo] = useState('');
@@ -68,6 +69,49 @@ function SendEmails({
     }
   };
 
+  const getDraftByAi = async(messageId, userInputs) => {
+    try {
+      const url = SERVER_URI + '/nylas/draft-email-with-ai';
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          Authorization: userId,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ messageId, userInputs }),
+      });
+
+      if (!res.ok) {
+        setToastNotification('error');
+        throw new Error(res.statusText);
+      }
+
+      const data = await res.json();
+
+      return data;
+
+    } catch (e) {
+      console.warn(`Error drafting response with AI:`, e);
+      setToastNotification('error');
+
+      return false;
+    }
+  }
+
+  {/* TODO: Uncomment after adding button Generate Response w/ AI */}
+  // useEffect(() => {
+  //   setBody('Enter a brief response for AI to generate a response');
+  // }, [])
+
+  const generateResponse = async (e) => {
+    e.preventDefault();
+    
+    const messageId = draftEmail.replyToMessageId
+    const draftBody = await getDraftByAi(messageId, body);
+
+    setBody(draftBody[messageId]);
+  }
+
   const send = async (e) => {
     e.preventDefault();
 
@@ -118,8 +162,20 @@ function SendEmails({
         value={body}
         onChange={(e) => setBody(e.target.value)}
       />
-
       <div className="composer-button-group">
+        {/* TODO: Uncomment after setting up backend endpoint */}
+        {/* {
+          !isSending && (
+            <button
+              className={`outline ${style}`}
+              disabled={!to || !body || isSending}
+              type="generate"
+              onClick={generateResponse}
+            >
+              Generate Response w/ AI
+            </button>
+          )
+        } */}
         <button
           className={`primary ${style}`}
           disabled={!to || !body || isSending}
