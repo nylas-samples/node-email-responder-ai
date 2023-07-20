@@ -62,25 +62,30 @@ Before we start coding (so while you go through the next few setup steps), spend
 
 Update `.env` to include `HUGGINGFACE_HUB_API_KEY`.
 
-
 ### Build a Service to call the Generative AI API (hint: 🤗)
 [TODO] Expand on this
-[TODO/Next] Create Seperate Branch
+[TODO/Next] Create Seperate Branch w/ Code
+
+Branch w/ Code Updates:
 
 ### Trying Different Generative AI Models for Email
 [TODO] Insert Related YT Video
 
 ### Build an Endpoint to Generate Email Responses
 [TODO] Which ones are we using and why
-[TODO] Create Seperate Branch
+[TODO] Create Seperate Branch w/ Code
+
+Branch w/ Code Updates:
 
 ### Generate Email Responses with just Email Body
 [TODO] Giphy of this flow
-[TODO] Create Seperate Branch
+[TODO] Create Seperate Branch w/ Code
 
 ### Generate Email Responses with Email Body & User Inputs
 [TODO] Giphy of this flow
-[TODO] Create Seperate Branch
+[TODO] Create Seperate Branch w/ Code
+
+Branch w/ Code Updates:
 
 ## Commits && Branches
 This section is an overview of different commits and branches for reference
