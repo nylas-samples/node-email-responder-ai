@@ -15,6 +15,7 @@
     "express": "^4.14.0",
     "nylas": "6.8.0",
     "request": "^2.74.0",
+    "string-strip-html": "^8.4.0",
     "uuid": "^8.3.2"
   }
 }
