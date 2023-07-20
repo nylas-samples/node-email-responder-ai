@@ -15,4 +15,16 @@ exports.generateEmailResponseGpt = async(startOfEmailResponse) => {
   return answer;
 }
 
-this.generateEmailResponseGpt("Let's grab a coffee on");
+exports.generateEmailResponse = async(emailBody) => {
+  const answer = await hf.textGeneration({
+    model: "OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
+    inputs: `<|prompter|>Respond to the following email: ${emailBody}<|endoftext|><|assistant|>`,
+  });
+
+  console.log(answer);
+  return answer;
+}
+
+// this.generateEmailResponseGpt("Let's grab a coffee on");
+
+// this.generateEmailResponse("Would you like to grab a coffee?");
