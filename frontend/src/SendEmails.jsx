@@ -98,10 +98,9 @@ function SendEmails({
     }
   }
 
-  {/* TODO: Uncomment after adding button Generate Response w/ AI */}
-  // useEffect(() => {
-  //   setBody('Enter a brief response for AI to generate a response');
-  // }, [])
+  useEffect(() => {
+    setBody('Enter a brief response for AI to generate a response');
+  }, [])
 
   const generateResponse = async (e) => {
     e.preventDefault();
@@ -163,8 +162,7 @@ function SendEmails({
         onChange={(e) => setBody(e.target.value)}
       />
       <div className="composer-button-group">
-        {/* TODO: Uncomment after setting up backend endpoint */}
-        {/* {
+        {
           !isSending && (
             <button
               className={`outline ${style}`}
@@ -175,7 +173,7 @@ function SendEmails({
               Generate Response w/ AI
             </button>
           )
-        } */}
+        }
         <button
           className={`primary ${style}`}
           disabled={!to || !body || isSending}
