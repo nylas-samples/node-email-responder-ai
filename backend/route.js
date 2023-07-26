@@ -2,6 +2,7 @@ const { default: Draft } = require('nylas/lib/models/draft');
 const Nylas = require('nylas');
 
 const { removeHtml } = require('./utils/email-cleanup');
+const { generateEmailResponse } = require('./services/generative-ai');
 
 exports.generateEmailDraftAI = async (req, res) => {
   const user = res.locals.user;
@@ -13,9 +14,8 @@ exports.generateEmailDraftAI = async (req, res) => {
 
   const emailBody = await removeHtml(message.snippet)
   
-  // TODO: Replace with AI Models
-  const response = 'Okay.'
-  const responses = {}
+  const response = generateEmailResponse(emailBody);
+  const responses = {};
 
   responses[messageId] = response;
   return res.json(responses);
