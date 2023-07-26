@@ -36,8 +36,10 @@ We've provided an example file, `backend/example.env`, in this repository that y
 ### Setup Nylas Email API Account
 We will be using Nylas to read & send emails. The Nylas Email API acts as a thin layer within your application to allow users to authenticate and connect to their communication data (Email, Calendar, and Contacts). By allowing your application to connect to your users' communication data, you can build powerful user features.
 
+One reference to use during the tutorial is our [Nylas developer documentation](https://developer.nylas.com/)
+
 #### Sign-up For Nylas (it's free!)
-**Tutorial Step 2.** Head to [Nylas](https://nylas.com/register) and sign up for your free account. We offer a free tier to get started and complete this tutorial.
+**Tutorial Step 2.** Head to [Nylas](https://nylas.com/wwc23-code) and sign up for your free account. We offer a free tier to get started and complete this tutorial.
 
 ### Download the Nylas Quick Start Guide to build locally.
 This repository (main branch) is taken directly from the Nylas Quick Start Guides. 
@@ -61,6 +63,8 @@ You can also find the keys from the Quickstart App settings:
 ![image1](https://github.com/nylas-samples/node-email-responder-ai/assets/553578/6603fefd-9752-43fe-b992-db047f3cec8a)
 
 We’ve recently done a live stream on how to build on using the [Nylas Quick Start Guides](https://www.youtube.com/watch?v=3lRxcHmIZyA&t=1s).
+
+Note: For `NYLAS_API_SERVER` we support both EU and US regions, so confirm which region you signed up for.  Read more about data [residenency on the Nylas docs](https://developer.nylas.com/docs/the-basics/platform/data-residency/)
 
 ### Setup Frontend/Backend for Development
 **Tutorial Step 4.** Follow `/frontend` & `/backend` folder `README.MD` instructions to complete: a) initial setup and b) ensure the server(s) run locally. If everything goes well, you should see the below frontend application running on your machine:
@@ -97,9 +101,7 @@ Does the application actually send emails? Let’s confirm that before moving on
 
 **Tutorial Step 7.** Now that we can read emails, try clicking on an email and responding using the Nylas Quick Start guide to ensure that everything is working.
 
-If you don’t want to send an email to an individual, you can consider updating the sender to yourself and sending an email to yourself to test out:
-
-This doesn’t help with levelling up on our inbox zero 💪, but we’ll get closer to that with Generative AI soon. Sending test emails will be useful for testing with generative AI.
+If you don’t want to send an email to an individual, you can consider updating the sender to yourself and sending an email to yourself to test out. Sending test emails will be useful for testing with generative AI. This doesn’t help with levelling up on our inbox zero 💪, but we’ll get closer to that with Generative AI soon.
 
 ### Setup Generative AI API Account (hint: 🤗)
 There are a few options when it comes to using a Generative AI API. For this tutorial we will use the HuggingFace Inference API that allows you to access quite a few models from a single API. The additional benefit is that HuggingFace hosts the models and offers a free tier for everyone to make requests to any model that has support for the HuggingFace Inference API.
