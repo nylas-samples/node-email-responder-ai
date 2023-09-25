@@ -65,8 +65,7 @@ We’ve recently done a live stream on how to build on using the [Nylas Quick St
 Note: For `NYLAS_API_SERVER` we support both EU and US regions, so confirm which region you signed up for.  Read more about data [residenency on the Nylas docs](https://developer.nylas.com/docs/the-basics/platform/data-residency/)
 
 ### Setup Frontend/Backend for Development
-**Tutorial Step 4.** Follow `/frontend` & `/backend` folder `README.MD` instructions to complete: a) initial setup and b) ensure the server(s) run locally. If everything goes well, you should see the below frontend application running on your machine:
-<img width="1416" alt="Screenshot 2023-07-26 at 10 45 54 AM" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/26e7b1d5-1332-4df6-81ea-3b7410f63bc9">
+**Tutorial Step 4.** Follow `/frontend` & `/backend` folder `README.MD` instructions to complete: a) initial setup and b) ensure the server(s) run locally. If everything goes well, you should see the below frontend application running on your machine.
 
 We'll move past this screen in the next steps!
 
