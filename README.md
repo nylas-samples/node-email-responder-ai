@@ -55,11 +55,10 @@ This repository (main branch) is taken directly from the Nylas Quick Start Guide
 Alternatively, you can clone the main branch:
 1. If you are cloning the repository (main branch), you can retrieve the Nylas credentials from the Quick Start Guide steps (view Quick Start Guide step `2. Initialize the Nylas SDK`):
 
-<img width="636" alt="image4" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/712377a1-ba84-4e5d-852b-dfa675a3f934">
+![image4](https://github.com/nylas-samples/node-email-responder-ai/assets/553578/4dbaea0d-3fb2-4a05-a04a-92ed3d77955e)
 
 You can also find the keys from the Quickstart App settings:
-
-![image1](https://github.com/nylas-samples/node-email-responder-ai/assets/553578/6603fefd-9752-43fe-b992-db047f3cec8a)
+![image1](https://github.com/nylas-samples/node-email-responder-ai/assets/553578/df4e9243-f378-4f83-880a-cc34b8c9f5ac)
 
 We’ve recently done a live stream on how to build on using the [Nylas Quick Start Guides](https://www.youtube.com/watch?v=3lRxcHmIZyA&t=1s).
 
