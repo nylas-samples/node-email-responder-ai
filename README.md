@@ -135,8 +135,7 @@ Branch w/ Code Updates: `generative-ai-service`
 ### Trying Different Generative AI Models for Email
 Choosing the right model can be challenging, however, let's leave that for a post-tutorial exploration. For this tutorial, we've decided to use a model created by OpenAssistant. We came across this model when checking out HuggingChat which was using a different model by the same creator, OpenAssistant. We decided to use a model by OppenAssistant: `OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5`. Here is an example of using the model in the webview to get a better understanding:
 
-<img width="1115" alt="hugging-face-web-implementation" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/d182a73f-6a04-49ad-8481-e305a592f1bd">
-
+<img width="1115" alt="hugging-face-web-implementation" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/49c97cdb-ffb2-4c47-b75a-b41cee807af6">
 
 We’ve recently done a live stream on [Creating Email Responses using Generative AI](https://www.youtube.com/watch?v=KNJWMGExt18) that serves as a gentle introduction to using the HuggingFace Interference API and exploring different models.
 
