@@ -92,7 +92,7 @@ We’ve recently done a livestream on how to set up a [Google API project for bu
 #### Checking the connected Account
 **Tutorial Step 6.** To confirm that your account is connected and for future account management, visit the Nylas Dashboard Account's section:
 
-<img width="1728" alt="Screenshot 2023-07-24 at 1 58 07 PM" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/fa750491-8b34-4b11-8328-5411ef5b8aab">
+<img width="1728" alt="Screenshot 2023-07-24 at 1 58 07 PM" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/4ec685b9-9660-4c78-85bd-e37d0c8c7480">
 
 ### Testing Read & Send Emails
 Does the application actually send emails? Let’s confirm that before moving on. 
