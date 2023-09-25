@@ -45,8 +45,6 @@ One reference to use during the tutorial is our [Nylas developer documentation](
 This repository (main branch) is taken directly from the Nylas Quick Start Guides. 
 
 **Tutorial Step 3.** Here are the steps to download it:
-<img width="1606" alt="Screenshot 2023-07-24 at 3 35 32 PM" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/919b40c7-952e-4982-ace1-9f216621e44e">
-
 <img width="1606" alt="Screenshot 2023-07-24 at 3 35 32 PM" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/85b65d2b-25f4-4bf7-85bc-d500373656db">
 
 1. Click on Quickstart Guides after onboarding
