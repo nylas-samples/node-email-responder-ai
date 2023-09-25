@@ -46,7 +46,7 @@ This repository (main branch) is taken directly from the Nylas Quick Start Guide
 
 **Tutorial Step 3.** Here are the steps to download it:
 
-<img width="1606" alt="Screenshot 2023-07-24 at 3 35 32 PM" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/472c7895-d47e-4f74-a08a-620021ef259c">
+<img width="1606" alt="Screenshot 2023-07-24 at 3 35 32 PM" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/85b65d2b-25f4-4bf7-85bc-d500373656db">
 
 1. Click on Quickstart Guides after onboarding
 3. Download the read-and-send email quickstart guide with the backend node.js and frontend react
