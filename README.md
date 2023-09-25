@@ -112,8 +112,7 @@ We will need the HuggingFace Inference API access token to be able to make calls
 **Tutorial Step 9.** Once you create an access token, add it to your `/backend/.env` file so we can use it when creating a service to make calls to different generative AI models. Update the `.env` to include `HUGGINGFACE_HUB_API_KEY`.
 
 Note: You may need to verify your email before you can create an access token.
-
-<img width="547" alt="image6" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/8e81fd1c-a7e9-4079-a85f-66a04e74effe">
+<img width="547" alt="image6" src="https://github.com/nylas-samples/node-email-responder-ai/assets/553578/e305fd60-324f-4841-bd0c-aea64c356d65">
 
 **Tutorial Step 10.** Test the HuggingFace API by creating a curl command in your terminal:
 ```sh
