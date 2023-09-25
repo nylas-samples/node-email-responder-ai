@@ -55,7 +55,7 @@ This repository (main branch) is taken directly from the Nylas Quick Start Guide
 Alternatively, you can clone the main branch:
 1. If you are cloning the repository (main branch), you can retrieve the Nylas credentials from the Quick Start Guide steps (view Quick Start Guide step `2. Initialize the Nylas SDK`):
 
-![image4](https://github.com/nylas-samples/node-email-responder-ai/assets/553578/4dbaea0d-3fb2-4a05-a04a-92ed3d77955e)
+![image1](https://github.com/nylas-samples/node-email-responder-ai/assets/553578/7bb5eb8b-a1b5-4f68-b0c8-6a0aa88f7256)
 
 You can also find the keys from the Quickstart App settings:
 ![image1](https://github.com/nylas-samples/node-email-responder-ai/assets/553578/df4e9243-f378-4f83-880a-cc34b8c9f5ac)
@@ -79,7 +79,7 @@ We need to authenticate an account to access the communication data. Once we aut
 
 **Tutorial Step 5.** Sign in using your account and complete the steps to authenticate your account. You will see all the emails from your email inbox right afterwards:
 
-![image](https://www.nylas.com/wp-content/uploads/image4-1.gif)
+![image4](https://github.com/nylas-samples/node-email-responder-ai/assets/553578/4dbaea0d-3fb2-4a05-a04a-92ed3d77955e)
 
 But I sense some magic going on. 🤔
 
