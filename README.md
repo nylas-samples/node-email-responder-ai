@@ -1,6 +1,8 @@
 ## Introduction
 This step-by-step tutorial will walk you through building an email responder using the Nylas Email API using Generative AI. We will use the Nylas Quick Start guide to build the functionality, so we are not starting from scratch.
 
+You can also check out our recent webinar where we [build an email responder from scratch](https://info.nylas.com/workshop-build-an-email-responder-generativeai-nylas.html).
+
 ## Features
 - Built (Nylas Quick Start Guide): User can read and send emails
 - To Build: The user can generate an email response using the email body alone
