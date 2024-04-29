@@ -14,7 +14,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.14.0",
-    "nylas": "6.8.0",
+    "nylas": "^7.2.1",
     "request": "^2.74.0",
     "string-strip-html": "^8.4.0",
     "uuid": "^8.3.2"
