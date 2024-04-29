@@ -1,54 +1,92 @@
-const { default: Draft } = require('nylas/lib/models/draft');
-const Nylas = require('nylas');
+import Nylas from 'nylas';
 
-exports.sendEmail = async (req, res) => {
+const NylasConfig = {
+  apiKey: process.env.NYLAS_API_KEY,
+  apiUri: process.env.NYLAS_API_REGION_URI,
+ };
+ 
+ const nylas = new Nylas(NylasConfig);
+
+const sendEmail = async (req, res) => {
   const user = res.locals.user;
 
-  const { to, subject, body, replyToMessageId } = req.body;
+  const { to, subject, body } = req.body;
 
-  const draft = new Draft(Nylas.with(user.accessToken));
+  const sentMessage = await nylas.messages.send({
+    identifier: user.grantId,
+    requestBody: {
+      to: [{ email: to }],
+      replyTo: [{ email: user.emailAddress }],
+      subject: subject,
+      body: body
+    },
+  });
 
-  draft.from = [{ email: user.emailAddress }];
-  draft.to = [{ email: to }];
-  draft.subject = subject;
-  draft.body = body;
-  draft.replyToMessageId = replyToMessageId;
-
-  const message = await draft.send();
-
-  return res.json(message);
+  return res.json(sentMessage);
 };
 
-exports.readEmails = async (req, res) => {
+const readEmails = async (req, res) => {
   const user = res.locals.user;
 
-  const nylas = Nylas.with(user.accessToken);
+  console.log({user})
 
-  const threads = await nylas.threads.list({ limit: 5, expanded: true });
-
-  return res.json(threads);
+  const threads = await nylas.threads.list({
+    identifier: user.grantId,
+    queryParams: {
+      limit: 5,
+    }
+  });
+  
+  return res.json(threads.data);
 };
 
-exports.getMessage = async (req, res) => {
+const getMessage = async (req, res) => {
   const user = res.locals.user;
 
-  const nylas = Nylas.with(user.accessToken);
+  const { id: messageId } = req.query;
+  
+  const message = await nylas.messages.find({
+    identifier: user.grantId,
+    messageId,
+  });
 
-  const { id } = req.query;
-  const message = await nylas.messages.find(id);
-
-  return res.json(message);
+  return res.json(message.data);
 };
 
-exports.getFile = async (req, res) => {
+const getMessages = async (req, res) => {
   const user = res.locals.user;
 
-  const nylas = Nylas.with(user.accessToken);
+  const { id: threadId } = req.query;
+  
+  const messages = await nylas.messages.list({
+    identifier: user.grantId,
+    queryParams: {
+      threadId,
+    }
+  });
 
-  const { id } = req.query;
-  const file = await nylas.files.find(id);
-
-  // Files will be returned as a binary object
-  const fileData = await file.download();
-  return res.end(fileData?.body);
+  return res.json(messages.data);
 };
+
+const getFile = async (req, res) => {
+  const user = res.locals.user;
+
+  // TODO: Add messageId to req.query on the frontend
+  const { id: attachmentId, messageId } = req.query;
+
+  const attachment = await nylas.attachments.find({
+    identifier: user.grantId,
+    attachmentId,
+    queryParams: { messageId }
+  });
+  
+  return res.end(attachment);
+};
+
+export default {
+  sendEmail,
+  readEmails,
+  getMessage,
+  getMessages,
+  getFile,
+}
