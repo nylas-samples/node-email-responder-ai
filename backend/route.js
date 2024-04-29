@@ -14,7 +14,7 @@ exports.generateEmailDraftAI = async (req, res) => {
 
   const emailBody = await removeHtml(message.snippet)
   
-  const response = generateEmailResponse(emailBody);
+  const response = await generateEmailResponse(emailBody);
   const responses = {};
 
   responses[messageId] = response;
