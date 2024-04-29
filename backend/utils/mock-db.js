@@ -1,5 +1,5 @@
-const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+import fs  from 'fs';
+import { v4 as uuidv4 } from 'uuid';
 
 class MockDB {
   constructor(filename) {
@@ -84,4 +84,4 @@ class MockDB {
 const mockDB = new MockDB('datastore.json');
 
 // 'datastore.json' is created at runtime
-module.exports = mockDB;
+export default mockDB;
